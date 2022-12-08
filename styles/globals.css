@@ -1,3 +1,8 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,12 +20,75 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+/*@media (prefers-color-scheme: dark) {*/
+/*  html {*/
+/*    color-scheme: dark;*/
+/*  }*/
+/*  body {*/
+/*    color: white;*/
+/*    background: black;*/
+/*  }*/
+/*}*/
+
+.main-container {
+  @apply px-5 mx-auto flex items-center;
+  max-width: 1200px;
+}
+
+.nav {
+  @apply border border-b-black w-full fixed top-0 z-10 transition-colors;
+  height: 75px;
+}
+
+.nav.blue {
+  @apply bg-blue-200
+}
+
+.nav.white {
+  @apply bg-white
+}
+
+.header {
+  @apply bg-blue-200;
+  margin-top: 75px;
+}
+
+.header-bg {
+  background-image: url("/section/header.png");
+  background-repeat: no-repeat;
+  background-size: 385px 341px;
+  background-position: bottom right;
+}
+
+.btn-rounded {
+  @apply px-5 py-2 rounded-full;
+}
+
+li {
+  list-style-type: none;
+}
+
+.latest-thumbnail {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+
+@media screen(sm) {
+  .latest-thumbnail {
+    position: relative;
+    width: 150px;
+    height: 100px;
   }
 }
+
+@media screen(md) {
+  .latest-thumbnail {
+    position: relative;
+    width: 200px;
+    height: 135px;
+  }
+}
+
+
+
